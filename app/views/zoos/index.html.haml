@@ -2,6 +2,16 @@
   .col-lg-12
     .panel.panel-default
       .panel-heading
-        %h3.panel-title Panel title
+        %h3.panel-title Zoos
       .panel-body
-        Panel content
+        %table.table.table-hover
+          %thead
+            %tr
+              %td Name
+              %td Total animals
+          %tbody
+            - @zoos.each do |zoo|
+              %tr
+                %td= zoo.name
+                %td= zoo.total_animals
+
