@@ -9,9 +9,16 @@
             %tr
               %td Name
               %td Total animals
+              %td Options
           %tbody
             - @zoos.each do |zoo|
               %tr
                 %td= zoo.name
                 %td= zoo.total_animals
+                %td
+                  = link_to 'show', zoo_path(zoo)
+                  |
+                  = link_to 'edit', edit_zoo_path(zoo)
+                  |
+                  = link_to 'delete', zoo_path(zoo, method: :destroy)
 
