@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   before_filter :find_animal, only: [:edit, :update, :destroy, :show]
-  before_filter :find_zoo
+  before_filter :find_zoo, only: [:index, :new, :edit]
 
   def index
     @animals = @zoo.animals
@@ -22,12 +22,24 @@ class AnimalsController < ApplicationController
     end
   end
 
-  def show
-
+  def update
+    if @animal.update(animal_params)
+      flash[:message] = t('animal.update_succesfully')
+      redirect_to zoo_animals_path
+    else
+      flash[:message] = t('animal.update_error')
+      render :edit
+    end
   end
 
+  def show
+  end
+
+  def edit
+  end
 
   private
+
   def animal_params
     params.require(:animal).permit(:name, :specie_id)
   end
