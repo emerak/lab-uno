@@ -32,6 +32,15 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def destroy
+    if @animal.destroy
+      flash[:message] = t('animal.destroy_succesfully')
+    else
+      flash[:message] = t('animal.destroy_error')
+    end
+    redirect_to zoo_animals_path
+  end
+
   def show
   end
 
