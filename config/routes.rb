@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :zoos
+  resources :zoos do
+    resources :animals
+  end
 end
