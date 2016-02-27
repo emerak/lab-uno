@@ -1,6 +1,6 @@
 class ZoosController < ApplicationController
 
-  before_filter :find_zoo, only: [:edit, :update]
+  before_filter :find_zoo, only: [:edit, :update, :destroy]
 
   def index
     @zoos = Zoo.all
@@ -32,6 +32,15 @@ class ZoosController < ApplicationController
       flash[:message] = t('zoo.update_error')
       render :edit
     end
+  end
+
+  def destroy
+    if @zoo.destroy
+      flash[:message] = t('zoo.destroy_succesfully')
+    else
+      flash[:message] = t('zoo.destroy_error')
+    end
+    redirect_to zoos_path
   end
 
   private
