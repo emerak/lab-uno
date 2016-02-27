@@ -6,6 +6,21 @@ class ZoosController < ApplicationController
     @zoos = Zoo.all
   end
 
+  def new
+    @zoo = Zoo.new
+  end
+
+  def create
+    @zoo = Zoo.new(zoo_params)
+    if @zoo.save
+      flash[:message] = t('zoo.create_succesfully')
+      redirect_to zoos_path
+    else
+      flash[:message] = t('zoo.create_error')
+      render :new
+    end
+  end
+
   def edit
   end
 
