@@ -7,5 +7,8 @@
         %dl.dl-horizontal
           %dt Total animals
           %dd= @zoo.total_animals
+          %dt Total species
+          %dd= @zoo.total_animals
+          %dt= link_to 'See Animals', zoo_animals_path(@zoo)
 
 
