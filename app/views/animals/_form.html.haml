@@ -1,0 +1,8 @@
+.row
+  .col-lg-12
+    = simple_form_for [@zoo, @animal], html: { class: 'form-horizontal' } do |f|
+      .form-inputs
+        = f.input :name
+        = f.association :specie, collection: Specie.all
+        = f.button :submit
+        = link_to 'Cancel', :back
