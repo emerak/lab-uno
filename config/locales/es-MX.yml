@@ -1,0 +1,32 @@
+es-MX:
+  animal:
+    create_succesfully: 'Creado exitosamente'
+    create_error: 'Ha ocurrido un error'
+    title: 'Animales'
+    add: 'Agregar animal'
+    delete: 'Borrar animal'
+    edit: 'Editar animal'
+    show: 'Mostrar animal'
+  zoo:
+    create_succesfully: 'Creado exitosamente'
+    create_error: 'Ha ocurrido un error'
+    title: 'Zoologicos'
+    total_animals: 'Total de animales'
+    total_species: 'Total de especies'
+    add: 'Agregar zoologico'
+    delete: 'Borrar zoologico'
+    edit: 'Editar zoologico'
+    show: 'Mostrar informacion'
+  specie:
+    create_succesfully: 'Creado exitosamente'
+    create_error: 'Ha ocurrido un error'
+    title: 'Especies'
+    add: 'Agregar especie'
+    delete: 'Borrar especie'
+    edit: 'Editar especie'
+    show: 'Ver specie'
+  views:
+    name: 'Nombre'
+    options: 'Opciones'
+    cancel: 'Cancelar'
+    see_animals: 'Ver animales'
