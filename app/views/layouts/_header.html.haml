@@ -1,6 +1,15 @@
-%nav.navbar.navbar-inverse
-  %ul.nav.navbar-nav.navbar-right
-  %li
-    = link_to 'Zoos', zoos_path
-  %li
-    = link_to 'Species', species_index_path
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#"}
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to t('zoo.title'), zoos_path
+        %li
+          = link_to t('specie.title'), species_index_path
