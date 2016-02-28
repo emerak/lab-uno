@@ -1,0 +1,8 @@
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title= @specie.name
+      .panel-body
+        %dl.dl-horizontal
+          %dt= link_to 'See Species', species_index_path
