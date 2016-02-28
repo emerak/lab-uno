@@ -2,21 +2,21 @@
   .col-lg-12
     .panel.panel-default
       .panel-heading
-        %h3.panel-title Species
+        %h3.panel-title= t('specie.title')
       .panel-body
-        = link_to 'Add specie', new_species_path
+        = link_to t('specie.add'), new_species_path
         %table.table.table-hover
           %thead
             %tr
-              %td Name
-              %td Options
+              %td= t('view.name')
+              %td= t('view.options')
           %tbody
             - @species.each do |specie|
               %tr
                 %td= specie.name
                 %td
-                  = link_to 'show', species_path(specie)
+                  = link_to t('specie.show'), species_path(specie)
                   |
-                  = link_to 'edit', edit_species_path(specie)
+                  = link_to t('specie.edit'), edit_species_path(specie)
                   |
-                  = link_to 'delete', species_path(specie), method: :delete, data: { confirm: 'Are you sure?' }
+                  = link_to t('specie.delete') , species_path(specie), method: :delete, data: { confirm: 'Are you sure?' }

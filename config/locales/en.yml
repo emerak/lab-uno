@@ -20,4 +20,36 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  animal:
+    create_succesfully: 'Created successfully'
+    create_error: 'There has been an error'
+    title: 'Animals'
+    add: 'Add animal'
+    delete: 'Delete animal'
+    edit: 'Edit animal'
+    show: 'Show animal'
+  zoo:
+    create_succesfully: 'Created successfully'
+    create_error: 'There has been an error'
+    title: 'Zoos'
+    total_animals: 'Total animals'
+    total_species: 'Total species'
+    add: 'Add zoo'
+    delete: 'Delete zoo'
+    edit: 'Edit zoo'
+    show: 'Show more'
+  specie:
+    create_succesfully: 'Created successfully'
+    create_error: 'There has been an error'
+    title: 'Species'
+    add: 'Add species'
+    delete: 'Delete species'
+    edit: 'Edit species'
+    show: 'Show species'
+  views:
+    name: 'Name'
+    options: 'Options'
+    cancel: 'Cancel'
+    see_animals: 'See Animals'
+
+

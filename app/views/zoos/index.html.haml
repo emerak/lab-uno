@@ -2,24 +2,26 @@
   .col-lg-12
     .panel.panel-default
       .panel-heading
-        %h3.panel-title Zoos
+        %h3.panel-title= t('zoo.title')
       .panel-body
-        = link_to 'Add zoo', new_zoo_path
+        = link_to t('zoo.add'), new_zoo_path
         %table.table.table-hover
           %thead
             %tr
-              %td Name
-              %td Total animals
-              %td Options
+              %td= t('views.name')
+              %td= t('zoo.total_animals')
+              %td= t('zoo.total_species')
+              %td= t('views.options')
           %tbody
             - @zoos.each do |zoo|
               %tr
                 %td= zoo.name
                 %td= zoo.total_animals
+                %td= zoo.total_species
                 %td
-                  = link_to 'show', zoo_path(zoo)
+                  = link_to t('zoo.show'), zoo_path(zoo)
                   |
-                  = link_to 'edit', edit_zoo_path(zoo)
+                  = link_to t('zoo.edit'), edit_zoo_path(zoo)
                   |
-                  = link_to 'delete', zoo_path(zoo), method: :delete, data: { confirm: 'Are you sure?' }
+                  = link_to t('zoo.delete'), zoo_path(zoo), method: :delete, data: { confirm: 'Are you sure?' }
 
