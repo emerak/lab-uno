@@ -51,5 +51,7 @@ en:
     options: 'Options'
     cancel: 'Cancel'
     see_animals: 'See Animals'
-
-
+    language: 'Change language'
+  language:
+    spanish: 'Spanish'
+    english: 'English'

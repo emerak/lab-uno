@@ -30,3 +30,7 @@ es-MX:
     options: 'Opciones'
     cancel: 'Cancelar'
     see_animals: 'Ver animales'
+    language: 'Cambiar idioma'
+  language:
+    spanish: 'Español'
+    english: 'Ingles'

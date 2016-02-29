@@ -13,3 +13,12 @@
           = link_to t('zoo.title'), zoos_path
         %li
           = link_to t('specie.title'), species_index_path
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            = t('views.language')
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              = link_to t('language.spanish'), change_language_path(:'es-MX')
+            %li
+              = link_to t('language.english'), change_language_path(:en)
