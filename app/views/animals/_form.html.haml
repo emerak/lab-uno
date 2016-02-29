@@ -4,5 +4,6 @@
       .form-inputs
         = f.input :name
         = f.association :specie, collection: Specie.all
+        = f.input :description, as: :text
         = f.button :submit
         = link_to t('views.cancel'), :back

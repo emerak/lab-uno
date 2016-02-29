@@ -28,6 +28,7 @@ en:
     delete: 'Delete animal'
     edit: 'Edit animal'
     show: 'Show animal'
+    description: 'Description'
   zoo:
     create_succesfully: 'Created successfully'
     create_error: 'There has been an error'

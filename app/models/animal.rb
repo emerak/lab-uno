@@ -4,4 +4,6 @@ class Animal < ActiveRecord::Base
 
   validates :name, presence: true
   validates :specie, presence: true
+
+  translates :description
 end

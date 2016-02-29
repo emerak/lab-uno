@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   before_filter :find_animal, only: [:edit, :update, :destroy, :show]
-  before_filter :find_zoo, only: [:index, :new, :edit]
+  before_filter :find_zoo, only: [:index, :new, :edit, :create]
 
   def index
     @animals = @zoo.animals
@@ -50,7 +50,7 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :specie_id)
+    params.require(:animal).permit(:name, :specie_id, :description)
   end
 
   def find_zoo

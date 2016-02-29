@@ -7,6 +7,7 @@ es-MX:
     delete: 'Borrar animal'
     edit: 'Editar animal'
     show: 'Mostrar animal'
+    description: 'Descripcion'
   zoo:
     create_succesfully: 'Creado exitosamente'
     create_error: 'Ha ocurrido un error'
