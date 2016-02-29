@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
-gem 'globalize', '~> 4.0.3'
+gem "globalize", github: "ncri/globalize"
 gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
