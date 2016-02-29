@@ -20,3 +20,4 @@
                   = link_to t('specie.edit'), edit_species_path(specie)
                   |
                   = link_to t('specie.delete') , species_path(specie), method: :delete, data: { confirm: 'Are you sure?' }
+        = paginate @species

@@ -2,7 +2,7 @@ class SpeciesController < ApplicationController
   before_filter :find_specie, only: [:update, :edit, :show, :destroy]
 
   def index
-    @species = Specie.all
+    @species = Specie.all.order(:name).page params[:page]
   end
 
   def new

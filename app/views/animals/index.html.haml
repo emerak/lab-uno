@@ -20,3 +20,5 @@
                   = link_to t('animal.edit'), edit_zoo_animal_path(animal.zoo, animal)
                   |
                   = link_to t('animal.delete'), zoo_animal_path(animal.zoo, animal), method: :delete, data: { confirm: 'Are you sure?' }
+
+        = paginate @animals

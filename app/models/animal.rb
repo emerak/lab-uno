@@ -5,5 +5,7 @@ class Animal < ActiveRecord::Base
   validates :name, presence: true
   validates :specie, presence: true
 
+  paginates_per 10
+
   translates :description
 end
