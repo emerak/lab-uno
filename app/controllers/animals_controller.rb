@@ -4,7 +4,7 @@ class AnimalsController < ApplicationController
   before_filter :find_zoo, only: [:index, :new, :edit, :create]
 
   def index
-    @animals = Animal.all.order(:name).page params[:page]
+    @animals = @zoo.animals.order(:name).page params[:page]
   end
 
   def new
