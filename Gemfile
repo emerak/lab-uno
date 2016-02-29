@@ -38,6 +38,7 @@ gem 'simple_form'
 gem "globalize", github: "ncri/globalize"
 gem 'rails-i18n', '~> 4.0.0'
 gem 'rails_12factor'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -3,7 +3,7 @@ class ZoosController < ApplicationController
   before_filter :find_zoo, only: [:edit, :update, :destroy, :show]
 
   def index
-    @zoos = Zoo.all
+    @zoos = Zoo.all.order(:name).page params[:page]
   end
 
   def new

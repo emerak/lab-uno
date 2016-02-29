@@ -4,6 +4,8 @@ class Zoo < ActiveRecord::Base
 
   validates :name, presence: true
 
+  paginates_per 10
+
   def total_species
     species.total
   end
