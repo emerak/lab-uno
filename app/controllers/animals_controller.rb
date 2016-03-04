@@ -57,6 +57,7 @@ class AnimalsController < ApplicationController
   end
 
   def find_animal
+    # with this code you could find an animal in another zoo
     @animal = Animal.find(params[:id])
   end
 end

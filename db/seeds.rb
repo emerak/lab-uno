@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
+# this could be thought find or create within a transaction block
 zoos = Zoo.create([
                     { name: 'San Diego Zoo' },
                     { name: 'Metropolitan Zoo' },

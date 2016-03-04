@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   private
 
   def set_language
-    I18n.locale = session[:language]
+    I18n.locale = session[:language] ] || I18n.default_locale
   end
 end
