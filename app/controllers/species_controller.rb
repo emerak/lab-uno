@@ -12,29 +12,30 @@ class SpeciesController < ApplicationController
   def create
     @specie = Specie.new(specie_params)
     if @specie.save
-      flash[:message] = t('species.create_succesfully')
+      # you could pass the mesage as a param on the redirect 
+      flash[:notice] = t('species.create_succesfully')
       redirect_to species_index_path
     else
-      flash[:message] = t('species.create_error')
+      flash[:notice] = t('species.create_error')
       render :new
     end
   end
 
   def update
     if @specie.update(specie_params)
-      flash[:message] = t('species.create_succesfully')
+      flash[:notice] = t('species.create_succesfully')
       redirect_to species_index_path
     else
-      flash[:message] = t('species.create_error')
+      flash[:notice] = t('species.create_error')
       render :new
     end
   end
 
   def destroy
-    if @specie.destroy
-      flash[:message] = t('specie.destroy_succesfully')
-    else
-      flash[:message] = t('specie.destroy_error')
+    flash[:notice] = if @specie.destroy
+                        t('specie.destroy_succesfully')
+                      else
+                        t('specie.destroy_error')
     end
     redirect_to species_index_path
   end
