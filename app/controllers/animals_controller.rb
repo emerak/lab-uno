@@ -1,5 +1,4 @@
 class AnimalsController < ApplicationController
-
   before_filter :find_animal, only: [:edit, :update, :destroy, :show]
   before_filter :find_zoo, only: [:index, :new, :edit, :create]
 
@@ -33,10 +32,10 @@ class AnimalsController < ApplicationController
   end
 
   def destroy
-    if @animal.destroy
-      flash[:message] = t('animal.destroy_succesfully')
-    else
-      flash[:message] = t('animal.destroy_error')
+    flash[:message] = if @animal.destroy
+                        t('animal.destroy_succesfully')
+                      else
+                        t('animal.destroy_error')
     end
     redirect_to zoo_animals_path
   end

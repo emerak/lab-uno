@@ -31,10 +31,10 @@ class SpeciesController < ApplicationController
   end
 
   def destroy
-    if @specie.destroy
-      flash[:message] = t('specie.destroy_succesfully')
-    else
-      flash[:message] = t('specie.destroy_error')
+    flash[:message] = if @specie.destroy
+                        t('specie.destroy_succesfully')
+                      else
+                        t('specie.destroy_error')
     end
     redirect_to species_index_path
   end
